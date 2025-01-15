@@ -52,28 +52,38 @@
 // Dichiariamo chi ha vinto.
 
 
+// Variabile per il numero dell'utente
+let randomNumberUser = parseInt(prompt("Inserisci qui un numero da 1 a 5 e scegli 'Pari o Dispari'"))
+    console.log(`Il numero che ha selezionato l'utente e' ${randomNumberUser}`)
 
 
-
-
-let randomNumberUser = 5
-    console.log(randomNumberUser)
-
+// Funzione per il numero random del Cpu
 function numberCpu (min,  max){
     return Math.floor(Math.random() * max) + min;
 }
-numberCpu(1,5)
-const randomNumberCpu = numberCpu(1,5)
-    console.log(randomNumberCpu)
+
+const randomNumberCpu = numberCpu(1,5);
+    console.log(`Il numero di Cpu e' ${randomNumberCpu}`)
 
 
+// Funzione per la somma dei due valori
 function sommaRisultati(num1, num2) {
-    console.log(num1 + num2);
-    
+    return num1 + num2;    
 }
-    sommaRisultati( randomNumberUser, randomNumberCpu )
+const somma = sommaRisultati( randomNumberUser, randomNumberCpu) 
+   console.log(`La somma dei numeri di User e Cpu e':${somma}`);
 
 
+// Funzione per stabilire il vincitore
+function pariODispari(x){
+    if(x % 2 == 0){
+    console.log(`Il numero ${x} e' pari, User vince`)
+    } else {
+    console.log(`Il numero ${x} e' dispari, Cpu vince`)
+    }
+}
+
+pariODispari(somma)
 
 
 
