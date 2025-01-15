@@ -14,20 +14,30 @@
 // 3. creare condizione per verificare se la parola dell'utente è uguale al risultato della funzione
 
 
+// Variabile per la scelta della parola
+let parolaUtente = prompt("Inserisci qui una parola e scopri se e' palindroma")
+    // console.log(parolaUtente)
 
-// let parolaUtente = "itopinonavevanonipoti"
-// const parolaUtenteSplit = parolaUtente.split("")
-//     console.log(parolaUtenteSplit)
 
-// function reverseWord (parolaUtente){
+// Funzione per invertire l'ordine dei caratteri della parola
+function reverseString (parolaDaGirare){
+    return parolaDaGirare.split("").reverse().join("")
+}
 
-//     for( let i = 0; i <= parolaUtenteSplit.length - 1; i++){
-//         let parolaUtenteSplit.charAt(i)
-//         console.log(parolaUtenteSplit.charAt(i))
+const parolaGirata = reverseString(parolaUtente)
+    // console.log(parolaGirata)
 
-//     }
 
-// }
+// Funzione per verificare il palindromo
+function verificaPalindromo(x, y){
+    if (x === y){
+        console.log(`La parola che hai scritto: "${parolaUtente}", e' palindroma`)
+    } else {
+        console.log(`La parola che hai scritto: "${parolaUtente}", non e' palindroma`)
+    }
+}
+
+verificaPalindromo(parolaUtente, parolaGirata)
 
 
 
@@ -84,44 +94,3 @@ function pariODispari(x){
 }
 
 pariODispari(somma)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let randomNumberUser = 5
-//     console.log(randomNumberUser)
-
-// function numberCpu (min,  max){
-//     return Math.floor(Math.random() * max) + min;
-// }
-
-// const randomNumberCpu = numberCpu(1,5)
-//     console.log(randomNumberCpu)
-
-
-// function sommaRisultati(num1, num2) {
-//     console.log(num1 + num2);
-    
-// }
-//     sommaRisultati( randomNumberUser, randomNumberCpu )
-    
